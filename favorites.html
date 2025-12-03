@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>My favorites</title>
+<meta name="description" content="Phoebe's quick, budget-friendly favorite recipes — fast meals for busy students." />
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#gallery">Skip to gallery</a>
+
+<header class="site-header" role="banner">
+  <div class="container header-inner">
+        <a class="brand" href="index.html">
+            <div class="logo" aria-hidden="true">FE</div>
+            <div>
+                <h1 class="site-title">FeebzEatz</h1>
+                <p class="tagline">Quick, budget-friendly recipes for everyone.</p>
+            </div>
+        </a>
+
+    <nav class="main-nav" role="navigation" aria-label="Primary navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="favorites.html" aria-current="page">My favorites</a></li>
+        <li><a href="quickcooks.html">Quick cooks</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main" role="main" class="container">
+  <h2>My favorites</h2>
+  <p>If you love Asian cuisine like me, these are the best!</p>
+
+  <section id="gallery" class="gallery-list" aria-live="polite">
+
+    <!-- Rose Tteokbokki -->
+    <article class="card" id="rosetteokbokki" tabindex="0" aria-labelledby="rosetto-title">
+      <figure>
+        <img src="images/rosetteokbokki.png" alt="Bowl of cheesy creamy tteokbokki with green onions" style="width:100%;border-radius:8px;display:block;margin-bottom:.5rem;">
+        <figcaption class="muted">≈ Cooking time: 45 min</figcaption>
+      </figure>
+      <h3 id="rosetto-title">Rosé Tteokbokki</h3>
+      <p class="meta">Tteokbokki upgraded with cheese, greens, and sesame — an easy, comforting dinner.</p>
+      <p><a class="btn" href="recipes/rosetteokbokki.html">View recipe</a></p>
+    </article>
+
+    <!-- Mushroom Miso Soup -->
+    <article class="card" id="miso-soup" tabindex="0" aria-labelledby="miso-title">
+      <figure>
+        <img src="images/misosoup.png" alt="Bowl of miso mushroom soup with tofu and scallions" style="width:100%;border-radius:8px;display:block;margin-bottom:.5rem;">
+        <figcaption class="muted">Light • 30 min • vegetarian (optional)</figcaption>
+      </figure>
+      <h3 id="miso-title">Miso Mushroom Soup</h3>
+      <p class="meta">Simple, savory soup with shiitake, silken tofu, and spinach — scalable and soothing.</p>
+      <p><a class="btn" href="recipes/misosoup.html">View recipe</a></p>
+    </article>
+
+    <!-- Peanut Noodles -->
+    <article class="card" id="peanut-noodles" tabindex="0" aria-labelledby="peanut-title">
+      <figure>
+        <img src="images/peanutnoodles.png" alt="Bowl of peanut butter noodles topped with sesame seeds" style="width:100%;border-radius:8px;display:block;margin-bottom:.5rem;">
+        <figcaption class="muted">30 min • 4-ingredient • meal prep friendly</figcaption>
+      </figure>
+      <h3 id="peanut-title">Peanut Butter Noodles</h3>
+      <p class="meta">Silky peanut sauce tossed with long noodles — super versatile.</p>
+      <p><a class="btn" href="recipes/peanutnoodles.html">View recipe</a></p>
+    </article>
+
+    <!-- Yaki Udon -->
+    <article class="card" id="yaki-udon" tabindex="0" aria-labelledby="yaki-title">
+      <figure>
+        <img src="images/yakiudon.png" alt="Yaki udon stir-fry with vegetables" style="width:100%;border-radius:8px;display:block;margin-bottom:.5rem;">
+        <figcaption class="muted">30 min • single-pan • customizable</figcaption>
+      </figure>
+      <h3 id="yaki-title">Yaki Udon</h3>
+      <p class="meta">Thick chewy udon tossed with veggies and your choice of protein — perfect for cleaning out the fridge.</p>
+      <p><a class="btn" href="recipes/yakiudon.html">View recipe</a></p>
+    </article>
+
+  </section>
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container"><p class="muted">© FeebzEatz — Phoebe</p></div>
+</footer>
+
+</body>
+</html>

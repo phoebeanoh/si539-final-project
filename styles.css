@@ -1,0 +1,452 @@
+
+
+/* ---------- CSS VARIABLES ---------- */
+:root {
+  --bg: #e8f4ff;         /* light baby blue */
+  --text: #0b0b0b;
+  --muted: #555;
+  --brand: #75b4ef;
+  --accent: #56b2d3;
+  --card: #ffffff;
+
+  --focus-color: #ffbf47;
+  --focus: 3px solid var(--focus-color);
+
+  --container: 1100px;
+  --radius: 10px;
+  --gap: 1rem;
+
+  --logo-size: 48px;
+  --avatar-size: 200px;
+
+  --shadow-soft: 0 2px 6px rgba(15, 23, 42, 0.04);
+  --shadow-strong: 0 10px 30px rgba(15,23,42,0.08);
+}
+
+/* ---------- RESET ---------- */
+* {
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.45;
+}
+
+/* ---------- LAYOUT CONTAINER ---------- */
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* =========================================================
+   HEADER + NAV
+   ========================================================= */
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo {
+  width: var(--logo-size);
+  height: var(--logo-size);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  background: linear-gradient(135deg, var(--brand), var(--accent));
+}
+
+.site-title {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.tagline {
+  margin: 0;
+  color: var(--muted);
+  font-size: .9rem;
+}
+
+/* nav */
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: .5rem;
+}
+
+.main-nav a {
+  padding: .45rem .6rem;
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.main-nav a[aria-current="page"] {
+  box-shadow: inset 0 -3px 0 var(--accent);
+}
+
+/* ---------- skip link ---------- */
+.skip-link {
+  position: absolute;
+  left: 0;
+  top: -40px;
+  background: black;
+  color: white;
+  padding: .5rem 1rem;
+  border-radius: 0 0 4px 4px;
+  z-index: 10;
+}
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* =========================================================
+   HERO INTRO SECTION WITH IMAGE
+   ========================================================= */
+
+.hero {
+  padding: 2rem 0;
+}
+
+.intro-section {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.intro-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.intro-image {
+  flex: 0 0 var(--avatar-size);
+}
+
+.intro-image img {
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+  box-shadow: var(--shadow-soft);
+}
+
+.intro-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+/* =========================================================
+   PANELS
+   ========================================================= */
+
+.panel {
+  background: var(--card);
+  padding: 1rem;
+  border-radius: var(--radius);
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-soft);
+}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.btn {
+  display: inline-block;
+  padding: .5rem .75rem;
+  border-radius: 8px;
+  text-decoration: none;
+  background: var(--brand);
+  color: rgb(0, 0, 0);
+}
+
+.btn.small {
+  padding: .35rem .5rem;
+  font-size: .9rem;
+}
+
+/* =========================================================
+   RECIPE GRID SECTIONS
+   ========================================================= */
+
+.recipe-section h3 {
+  margin-top: 0;
+  font-size: 1.3rem;
+}
+
+/* grid */
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  justify-items: center;      /* Center cards */
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+/* Recipe card layout */
+.recipe-card {
+  width: 260px;               /* Consistent width for centering */
+  background: var(--card);
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;         /* Center text inside */
+  transition: transform 300ms ease, box-shadow 300ms ease;
+  box-shadow: var(--shadow-soft);
+}
+
+/* Clickable area */
+.recipe-card a {
+  display: block;
+  padding: .85rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Images */
+.recipe-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  transition: transform 400ms cubic-bezier(.2,.9,.3,1),
+              filter 300ms ease;
+}
+
+/* Hover + focus enlarge effect */
+.recipe-card:hover,
+.recipe-card:focus-within {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-strong);
+}
+
+.recipe-card:hover img,
+.recipe-card:focus-within img {
+  transform: scale(1.06);
+  filter: saturate(1.05);
+}
+
+/* Keyboard accessibility */
+.recipe-card:focus-within {
+  outline: none;
+  box-shadow:
+    0 0 0 4px rgba(255,191,71,.12),
+    var(--shadow-strong);
+}
+
+/* Mobile tweaks */
+@media (max-width: 600px) {
+  .recipe-card {
+    width: 100%;     /* fills width on small screens */
+  }
+  .recipe-card img {
+    height: 200px;
+  }
+}
+
+
+
+/* focus */
+:focus {
+  outline: none;
+}
+:focus-visible {
+  box-shadow: var(--focus);
+  border-radius: 6px;
+}
+
+/* large text utility */
+.large-text {
+  font-size: 1.15rem;
+}
+
+/* reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
+
+
+@media (max-width: 900px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .main-nav ul {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 700px) {
+  .intro-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+  .intro-image {
+    margin: 0 auto;
+  }
+  .recipe-card img {
+    height: 190px;
+  }
+}
+
+/* EXTRA polish on huge screens */
+@media (min-width: 1400px) {
+  .panel,
+  .recipe-card {
+    box-shadow: 0 6px 18px rgba(15,23,42,0.06);
+  }
+}
+
+
+.gallery-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  justify-items: center;   /* centers each card in the grid cell */
+  gap: 1.5rem;
+  margin-top: 1rem;
+  padding: 1rem 0;
+}
+
+.gallery-list .card {
+  width: 260px;            /* consistent card width */
+  background: var(--card); /* white box */
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: var(--shadow-soft);
+  text-align: center;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.gallery-list .card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: .5rem;
+}
+
+/* lift on hover / focus */
+.gallery-list .card:hover,
+.gallery-list .card:focus-within {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-strong);
+}
+
+/* meta and buttons inside card */
+.gallery-list .card .meta {
+  color: var(--muted);
+  font-size: .9rem;
+  margin: 0;
+}
+
+.gallery-list .card .btn {
+  margin-top: auto; /* push button to bottom if card grows */
+  align-self: center;
+}
+
+/* small screens: cards fill container */
+@media (max-width: 600px) {
+  .gallery-list .card { width: 100%; }
+  .gallery-list .card img { height: 200px; }
+}
+
+
+/* --- Three-image recipe row in the mushroom miso soup--- */
+
+.recipe-image-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0 2rem;
+  align-items: start;
+  justify-items: center;
+}
+
+.mini-figure {
+  text-align: center;
+}
+
+.mini-figure img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.08);
+}
+
+.mini-figure figcaption {
+  margin-top: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* Mobile tweak */
+@media (max-width: 500px) {
+  .mini-figure img {
+    height: 180px;
+  }
+}
+
+
+
+/* Default cursor */
+html, body {
+  cursor: url('images/Frying\ Pan.png') 16 16, auto;
+}
+
+/* Hover: fiery frying pan for interactiveness */
+a:hover,
+button:hover,
+.btn:hover,
+.card:hover,
+.recipe-card:hover,
+.gallery-list .card:hover,
+.recipe-image-row .mini-figure:hover {
+  cursor: url('images/Fire\ Frying\ Pan.png') 16 16, pointer;
+}
+
+/* Also show fiery cursor when keyboard focusing */
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible,
+.card:focus-visible,
+.recipe-card:focus-visible,
+.gallery-list .card:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  cursor: url('images/Frying\ Pan.png') 16 16, pointer;
+}

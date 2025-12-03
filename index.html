@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FeebzEatz</title>
+
+    <meta name="description" content="FeebzEatz — accessible, budget-friendly recipes for everyone." />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" role="banner">
+        <div class="container header-inner">
+
+            <a class="brand" href="index.html">
+                <div class="logo" aria-hidden="true">FE</div>
+                <div>
+                    <h1 class="site-title">FeebzEatz</h1>
+                    <p class="tagline">Quick, budget-friendly recipes for everyone.</p>
+                </div>
+            </a>
+
+            <nav class="main-nav" role="navigation" aria-label="Primary navigation">
+                <ul>
+                    <li><a href="index.html" aria-current="page">Home</a></li>
+                    <li><a href="favorites.html">My favorites</a></li>
+                    <li><a href="quickcooks.html">Quick cooks</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" role="main" class="container">
+
+        <!-- INTRO WITH IMAGE -->
+        <section class="hero intro-section" aria-labelledby="hero-heading">
+            <div class="intro-wrapper">
+
+                <div class="intro-image">
+                    <img src="images/feebzdrawing.png" alt="Illustration of Phoebe" />
+                </div>
+
+                <div class="intro-text">
+                    <h2 id="hero-heading">Hi — I’m Phoebe 👋</h2>
+                    <p>I’m a Master’s student at the University of Michigan School of Information studying UX Design, and cooking used to terrify me. I didn’t really start until my sophomore year in bachelor's, but once I did, I realized how fun it actually is.</p>
+                    <p>Now I’m a busy (and very broke) UMich student always hunting for quick, affordable meals between classes and work. I love cooking for myself and my roommates, so I made this site to share a few of my favorites!</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION 1: COLD FAVORITES -->
+        <section id="cold-faves" class="panel recipe-section" aria-labelledby="cold-heading">
+            <h3 id="cold-heading">My favorites to eat in the cold</h3>
+
+            <div class="recipe-grid">
+                <article class="recipe-card" tabindex="0" aria-labelledby="r1-title">
+                    <a href="recipes/misosoup.html">
+                        <img src="./images/misosoup.png" alt="Bowl of mushroom miso soup" />
+                        <h4 id="r1-title">Mushroom Miso Soup</h4>
+                        <p class="meta">≈ Level: Easy • 30 min</p>
+                    </a>
+                </article>
+
+                <article class="recipe-card" tabindex="0" aria-labelledby="r2-title">
+                    <a href="recipes/rosetteokbokki.html">
+                        <img src="images/rosetteokbokki.png" alt="Rosé tteokbokki in a bowl" />
+                        <h4 id="r2-title">Rosé Tteokbokki</h4>
+                        <p class="meta">≈ Level: Medium • 45 min</p>
+                    </a>
+                </article>
+
+                <article class="recipe-card" tabindex="0" aria-labelledby="r3-title">
+                    <a href="recipes/yakiudon.html">
+                        <img src="images/yakiudon.png" alt="Yaki udon stir-fry" />
+                        <h4 id="r3-title">Yaki Udon</h4>
+                        <p class="meta">≈ Level: Easy • 30 min</p>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <!-- SECTION 2: CHEAP EATS -->
+        <section id="cheap-eats" class="panel recipe-section" aria-labelledby="cheap-heading">
+            <h3 id="cheap-heading">Cheap eats!</h3>
+
+            <div class="recipe-grid">
+                <article class="recipe-card" tabindex="0" aria-labelledby="r4-title">
+                    <a href="recipes/peanutnoodles.html">
+                        <img src="images/peanutnoodles.png" alt="Peanut butter noodles" />
+                        <h4 id="r4-title">Peanut Noodles</h4>
+                        <p class="meta">≈ Level: Easy • 30 min</p>
+                    </a>
+                </article>
+
+                <article class="recipe-card" tabindex="0" aria-labelledby="r5-title">
+                    <a href="recipes/dango.html">
+                        <img src="images/dango.png" alt="Dango skewers" />
+                        <h4 id="r5-title">Dango (Sweet Soft Ricecakes)</h4>
+                        <p class="meta">≈ Level: Easy • 30 min</p>
+                    </a>
+                </article>
+
+                <article class="recipe-card" tabindex="0" aria-labelledby="r6-title">
+                    <a href="recipes/coldsoba.html">
+                        <img src="images/coldsoba.png" alt="Cold soba noodles with dipping sauce" />
+                        <h4 id="r6-title">Cold Soba Noodles</h4>
+                        <p class="meta">≈ Level: SUPER Easy • 10 min</p>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <p>Built by Phoebe Oh — accessible front-end practice. <span class="muted">University of Michigan</span></p>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

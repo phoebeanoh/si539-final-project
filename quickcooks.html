@@ -1,0 +1,131 @@
+<!doctype html>
+<!-- FIX: Added lang attribute for accessibility -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Quick Cooks — Recipes that take 30 min to prep and less!</title>
+<meta name="description" content="Phoebe's quick, budget-friendly favorite recipes — fast meals for busy students." />
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<!-- FIX: skip link is good -->
+<a class="skip-link" href="#gallery">Skip to gallery</a>
+
+<!-- FIX: Ensure header uses correct landmark role -->
+<header class="site-header" role="banner">
+  <div class="container header-inner">
+
+    <a class="brand" href="index.html">
+      <div class="logo" aria-hidden="true">FE</div>
+      <div>
+        <h1 class="site-title">FeebzEatz</h1>
+        <p class="tagline">Quick, budget-friendly recipes for everyone.</p>
+      </div>
+    </a>
+
+    <!-- FIX: add aria-label to navigation landmark -->
+    <nav class="main-nav" role="navigation" aria-label="Primary navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="favorites.html">My favorites</a></li>
+        <li><a href="quickcooks.html" aria-current="page">Quick cooks</a></li>
+      </ul>
+    </nav>
+
+  </div>
+</header>
+
+<!-- FIX: add role="main" so all content is contained in proper landmark -->
+<main class="container" role="main">
+  <h2>Super Quick Meals!</h2>
+  <p>Perfect if you're on the run and want a quick and filling dish.</p>
+
+  <!-- FIX: aria-live is fine for dynamic content -->
+  <section id="gallery" class="gallery-list" aria-live="polite">
+
+    <!-- MISO SOUP -->
+    <article class="card" id="miso-soup" tabindex="0" aria-labelledby="miso-title">
+      <figure>
+        <!-- FIX alt is good -->
+        <img src="images/misosoup.png"
+             alt="Bowl of miso mushroom soup with tofu and scallions"
+             style="width:100%;border-radius:8px;display:block;margin-bottom:.5rem;">
+        <figcaption class="muted">Light • 35 min • vegetarian (optional)</figcaption>
+      </figure>
+
+      <h3 id="miso-title">Miso Mushroom Soup</h3>
+      <p class="meta">Simple, savory soup with shiitake, silken tofu, and spinach — scalable and soothing.</p>
+      <p><a class="btn" href="recipes/misosoup.html">View recipe</a></p>
+    </article>
+
+    <!-- PEANUT NOODLES -->
+    <article class="card" id="peanut-noodles" tabindex="0" aria-labelledby="peanut-title">
+      <figure>
+        <img src="images/peanutnoodles.png"
+             alt="Bowl of peanut butter noodles topped with sesame seeds"
+             style="width:100%;border-radius:8px;display:block;margin-bottom:.5rem;">
+        <figcaption class="muted">15 min • 4-ingredient • meal prep friendly</figcaption>
+      </figure>
+
+      <h3 id="peanut-title">Peanut Butter Noodles</h3>
+      <p class="meta">Silky peanut sauce tossed with long noodles — 4 ingredients and incredibly versatile.</p>
+      <p><a class="btn" href="recipes/peanutnoodles.html">View recipe</a></p>
+    </article>
+
+    <!-- YAKI UDON -->
+    <article class="card" id="yaki-udon" tabindex="0" aria-labelledby="yaki-title">
+      <figure>
+        <img src="images/yakiudon.png"
+             alt="Stir-fried yaki udon noodles with vegetables"
+             style="width:100%;border-radius:8px;display:block;margin-bottom:.5rem;">
+        <figcaption class="muted">15 min • single-pan • customizable</figcaption>
+      </figure>
+
+      <h3 id="yaki-title">Yaki Udon</h3>
+      <p class="meta">Thick chewy udon tossed with veggies and your choice of protein — perfect for cleaning out the fridge.</p>
+      <p><a class="btn" href="recipes/yakiudon.html">View recipe</a></p>
+    </article>
+
+    <!-- DANGO -->
+    <article class="card" id="dango" tabindex="0" aria-labelledby="dango-title">
+      <figure>
+        <img src="images/dango.png"
+             alt="Sweet chewy dango skewers"
+             style="width:100%;border-radius:8px;display:block;margin-bottom:.5rem;">
+        <figcaption class="muted">≈ Cooking time: 30 min</figcaption>
+      </figure>
+
+      <h3 id="dango-title">Dango</h3>
+      <p class="meta">Sweet, chewy goodness on a plate — perfect if you love rice cakes.</p>
+      <p><a class="btn" href="recipes/dango.html">View recipe</a></p>
+    </article>
+
+    <!-- COLD SOBA -->
+    <article class="card" id="coldsoba" tabindex="0" aria-labelledby="coldsoba-title">
+      <figure>
+        <img src="images/coldsoba.png"
+             alt="Cold soba noodles in a bowl with dipping sauce"
+             style="width:100%;border-radius:8px;display:block;margin-bottom:.5rem;">
+        <figcaption class="muted">≈ Cooking time: 15 min</figcaption>
+      </figure>
+
+      <h3 id="coldsoba-title">Cold Soba</h3>
+      <p class="meta">Super refreshing and perfect when you’re rushing.</p>
+      <p><a class="btn" href="recipes/coldsoba.html">View recipe</a></p>
+    </article>
+
+  </section>
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <p class="muted">© FeebzEatz — Phoebe</p>
+  </div>
+</footer>
+
+</body>
+</html>
